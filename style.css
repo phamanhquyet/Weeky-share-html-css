@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Lato';
+}
+.title{
+    letter-spacing: 4px;
+    font-family: "Segoe UI",Arial,sans-serif;
+    font-weight: 400;
+    margin: 10px 0;
+    text-transform: uppercase;
+    font-size: 30px;
+}
+.container{
+    max-width: calc(768px + 10px);
+    padding: 0px 5px;
+    margin: 0 auto;
+}
+.descorection{
+    color: #ccc;
+}
+
+.header {
+    display: flex;
+    z-index: 999;
+    justify-content: space-between;
+    align-items: stretch;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: max-content;
+}
+
+.header__nav {
+    display: flex;
+
+    align-items: center;
+    list-style: none;
+}
+
+.header__item {
+    color: white;
+    cursor: pointer;
+    position: relative;
+}
+
+.header__item:hover {
+    transition: all 0.5s ease;
+    color: black;
+    background-color: #ccc;
+}
+
+.header__item a {
+    display: block;
+    color: inherit;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-size: 15px;
+    line-height: 22.2px;
+    text-transform: uppercase;
+}
+
+.header__search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.header__search:hover {
+    transition: all 0.5s ease;
+
+    background-color: rgb(160, 0, 0);
+
+}
+
+.header__search i {
+    color: inherit;
+    padding: 12px 24px;
+}
+
+.header__submenu {
+    display: none;
+    position: absolute;
+    background-color: rgb(241, 241, 241);
+    width: 160px;
+    list-style: none;
+     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.header__submenu__item {
+    color: black;
+    width: 100%;
+}
+
+.header__submenu__item:hover {
+    background-color: #ccc;
+    color: black;
+}
+
+.header__submenu__item>a {
+    font-size: 16px;
+    font-weight: 400;
+}
+.header__item:hover > .header__submenu {
+    transition:all 0.5s ease ;
+    display: block;
+}
+/* ---------slider----------------- */
+.slider{
+   
+    width: 100%;
+    position: relative;
+}
+.slider__backgroud{
+ width: 100%;
+ height: 100%;
+ min-height: 90vh;
+ object-fit: cover;
+}
+.slider__content{
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    color: white;
+    padding: 50px;
+    white-space: nowrap;
+
+   
+}
+.slider__content > h3{
+    font-family: "Segoe UI",Arial,sans-serif;
+    font-weight: 400;
+    font-size: 30px;
+
+}
+/* about */
+.about{
+ padding: calc(75px) 0;
+}
+.about__container{
+    text-align: center;
+}
+.about__content{
+   text-align: justify;
+   margin: 25px;
+   
+}
+.about__menber{
+    display: flex;
+ flex-direction: row;
+ justify-content: space-evenly;
+ margin: 55px 0;
+}
+.about__menber__card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+    flex-direction: column;
+}
+.about__menber__avatar{
+    max-width: 155px;
+    border-radius: 8px;
+    outline: none;
+}
+.header__mobile{
+    display: none;
+ }
+/*  css cho fablet */
+@media screen and (max-width: 600px){
+    .header__nav{
+        display: none;
+    }
+    .header__search{
+        display: none;
+    }
+    .header__mobile{
+       display: flex;
+       justify-content: space-between;
+       align-items: stretch;
+       width: 100%;
+    }
+    .header__mobile__icon{
+      color: white;
+      padding: 10px;
+
+    }
+    .header__mobile__icon i{
+        font-size: 20px;
+        color: white;
+      }
+
+      .slider__content{
+        width: max-content;
+      }
+      .about__menber{
+        flex-direction: column;
+      }
+}
